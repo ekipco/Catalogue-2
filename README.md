@@ -1,4 +1,2 @@
-## Development
-Projeyi klonladıktan sonra `nmp install` komutu çalıştırılır.
-
-Daha sonra projeyi localhost'ta ayağa kaldırmak için `ng serve` komutu çalıştırılır.
+# Katalog Sitesi Case Study
+Projeyi çalıştırmak için `npm install` ve `ng serve` komutlarını çalıştırın.

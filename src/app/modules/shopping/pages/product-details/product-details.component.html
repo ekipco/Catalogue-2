@@ -1,0 +1,18 @@
+<ng-container *ngrxLet="product$ as product">
+  <div class="border d-flex flex-row detail-wrapper"
+       *ngIf="product">
+    <img [src]="product.productImage"
+         class="border-right" />
+    <div class="d-flex flex-column p-4">
+      <h4 [textContent]="product.name"></h4>
+      <p [textContent]="product.description"></p>
+      <span class="lead">{{product.price}}₺</span>
+      <div (click)="toggleFavorite(product)"
+           class="d-flex mt-4 add-to-f">
+        <i-bs [name]="product.isFavorite ? 'heart-fill' : 'heart'"
+              class="add-favorite mr-2"></i-bs>
+        <span class="font-weight-bold">Favorilere ekle</span>
+      </div>
+    </div>
+  </div>
+</ng-container>

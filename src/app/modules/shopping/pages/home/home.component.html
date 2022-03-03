@@ -1,0 +1,14 @@
+<slider></slider>
+<div class="d-flex flex-column align-content-center justify-content-center mt-4 w-100">
+  <span class="text-center k-header">Kategoriler</span>
+  <div class="p-3 d-flex justify-content-center">
+    <ng-container *ngrxLet="categories$ as categories">
+      <a class="btn btn-outline-dark"
+         [routerLink]="['/shopping/products', category.id]"
+         [state]="{navigatedCategory: category}"
+         [ngClass]="{'mr-5': !last}"
+         *ngFor="let category of categories; let last=last"
+         [textContent]="category.name"></a>
+    </ng-container>
+  </div>
+</div>

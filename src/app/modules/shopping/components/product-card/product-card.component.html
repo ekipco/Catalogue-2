@@ -1,0 +1,18 @@
+<div class="card"
+     [routerLink]="['/shopping/product', product.id]"
+     style="width: 18rem;">
+  <img [src]="product.productImage"
+       class="card-img-top border-bottom">
+  <div class="card-body">
+    <h5 class="card-title text-truncate"
+        [textContent]="product.name"></h5>
+    <p class="card-text"
+       [textContent]="product.description"></p>
+    <div class="d-flex justify-content-between align-content-center">
+      <span class="lead">{{product.price}}₺</span>
+      <i-bs (click)="toggleFavorite($event)"
+            [name]="product.isFavorite ? 'heart-fill' : 'heart'"
+            class="add-favorite"></i-bs>
+    </div>
+  </div>
+</div>

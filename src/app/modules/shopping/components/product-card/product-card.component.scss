@@ -1,0 +1,28 @@
+:host {
+
+  .card {
+    cursor: pointer;
+  }
+
+  img {
+    height: 172px;
+    object-fit: scale-down;
+    user-select: none;
+  }
+
+  .card-text {
+    height: 124px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
+  .add-favorite {
+    cursor: pointer;
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,19 @@
+<ng-container *ngrxLet="products$ as products">
+  <ng-container *ngFor="let item of products | mapToProductsArray">
+    <ng-container *ngIf="item.categoryId | getCategory | ngrxPush as category">
+      <div class="border-bottom mb-3 pb-2">
+        <span class="lead"
+              [textContent]="category.name"></span>
+      </div>
+    </ng-container>
+
+    <div class="d-flex flex-wrap"
+         style="margin-right: -1.5em;">
+      <product-card (setFavorite)="setFavorite($event)"
+                    class="mr-4 mb-4"
+                    *ngFor="let product of item.products"
+                    [product]="product"></product-card>
+    </div>
+  </ng-container>
+
+</ng-container>

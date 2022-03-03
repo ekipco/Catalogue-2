@@ -1,0 +1,19 @@
+  <div class="d-flex flex-row p-2 justify-content-center">
+    <div class="d-flex flex-column align-content-center justify-content-center mr-5 brand">
+      <a routerLink="shopping"
+         class="font-weight-bold text-dark text-truncate">Katalog App</a>
+    </div>
+    <ul ngbNav
+        [activeId]="route.firstChild?.routeConfig?.path"
+        class="nav-pills nav w-100">
+      <li [ngbNavItem]="item.path"
+          *ngFor="let item of navigation$ | ngrxPush ">
+        <a ngbNavLink
+           [routerLink]="item.path">
+          <i-bs *ngIf="item.icon"
+                [name]="item.icon"
+                class="mr-1"></i-bs>{{item.title}}
+        </a>
+      </li>
+    </ul>
+  </div>

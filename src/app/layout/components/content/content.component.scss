@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  z-index: 1;
+  flex: 1 1 auto;
+  background-color: transparent;
+  padding: 2rem 4rem;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  >*:not(router-outlet) {
+    flex: 1 1 0%;
+  }
+}

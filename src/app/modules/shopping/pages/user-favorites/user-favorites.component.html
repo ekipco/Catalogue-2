@@ -1,0 +1,16 @@
+<ng-container *ngrxLet="favorites$ as favorites">
+  <div *ngIf="favorites.length; else elseTemplate"
+       class="d-flex flex-wrap"
+       style="margin-right: -1.5em;">
+    <product-card (setFavorite)="setFavorite($event)"
+                  class="mr-4 mb-4"
+                  *ngFor="let favorite of favorites"
+                  [product]="favorite"></product-card>
+  </div>
+  <ng-template #elseTemplate>
+    <div class="text-center">
+      <span class="lead">Favori ürün bulunmamaktadır.</span>
+    </div>
+  </ng-template>
+
+</ng-container>

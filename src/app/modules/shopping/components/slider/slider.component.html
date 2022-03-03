@@ -1,0 +1,21 @@
+<ng-container *ngrxLet="loading$ as loading">
+  <ngb-carousel *ngIf="!loading"
+                #carousel
+                [showNavigationArrows]="true"
+                [interval]="5000"
+                [pauseOnFocus]="true">
+
+    <ng-container *ngrxLet="images$ as images">
+      <ng-template ngbSlide
+                   *ngFor="let img of images; index as i">
+        <a [routerLink]="['/shopping/product', img.productId]"
+           rel="nofollow noopener noreferrer">
+          <div class="picsum-img-wrapper">
+            <img [src]="img.image">
+          </div>
+        </a>
+      </ng-template>
+    </ng-container>
+
+  </ngb-carousel>
+</ng-container>

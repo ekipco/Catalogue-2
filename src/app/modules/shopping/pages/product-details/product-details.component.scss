@@ -1,0 +1,19 @@
+:host {
+
+  .detail-wrapper {
+    height: 396px;
+    width: 1024px;
+  }
+
+  img {
+    height: 100%;
+    width: 396px;
+    object-fit: scale-down;
+    user-select: none;
+  }
+
+  .add-to-f {
+    cursor: pointer;
+  }
+
+}
